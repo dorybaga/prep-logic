@@ -56,49 +56,155 @@ Function - youGetTaco
 Write a function that takes a single String parameter called action. If the value passed into our function is eat 
 have the function return the String value EAT TACOS.
 */
-function youGetTaco(action){
-  return action + " tacos";
-}
-var whatsForDinner = youGetTaco("eat");
+
+//step 1: define function
+
+
+//step 2: invoke and store
+
+//step 3: test code
 // console.log(whatsForDinner);
 
+function youGetTaco(action){
+  if (action === 'eat'){
+    return 'eat tacos';
+  }
+}
+var tacoBell = youGetTaco('eat');
+// console.log(tacoBell);
 
 /*Function - isNumberGreaterThan
 Write a function that takes two parameters of type Number called first and second respectively. 
 Return true if the first number is greater than the second.*/
-function isNumberGreaterThan(first, second){
 
+function isNumberGreaterThan(first, second){
+  if(first > second){
+    return true;
+  }else{
+    return false;
+  }
 }
+
+var weekendCrazy = isNumberGreaterThan(5,10);
+// console.log(isNumberGreaterThan(5,10));
+// console.log(isNumberGreaterThan(10,5));
+
+function isNumberGreaterThanThis(first, second){
+  if (first > second){
+    return true;
+  }
+  return false;
+}
+var test = isNumberGreaterThanThis(5,10);
+// console.log(test);
 
 
 /*Function - isTrue
-Write a function that takes in a Boolean value named val and have the function return whether the value is true.*/
+Write a function that takes in a Boolean value named val and have the function return 
+whether the value is true.*/
+
+function isTrue(val){
+  if(val === "rainy"){
+    return true;
+  }
+}
+// console.log(isTrue("rainy"));
+// console.log(isTrue("sunny"));
 
 
-
+//simplify number of booleans
+function isTrue(val){
+  return val;
+}
+var isBooleanQuestion = isTrue(2>4);
+// console.log(isBooleanQuestion);
 
 /*Function - isFalse
 Write a function that takes in a Boolean value named val and have the function return whether the value is false.*/
 
+function isFalse(val){
+  if(val === "fried chicken"){
+    return false;
+  }
+}
+// console.log(isFalse("fried chicken"));
+// console.log(isFalse("french fries"));
 
+function isFalse(val){
+  return !val;
+}
+var bangBang = isFalse(false);
+// console.log(bangBang);
+
+function isFalse(val){
+  return val;
+}
+var methodThree = isFalse(2>4);
+// console.log(methodThree);
 
 
 /*Function - isEqual
-Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
+Write a function that takes two variables of type String called firstWord and secondWord respectively. 
+Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
+
+function isEqual(firstWord, secondWord){
+  if (firstWord === secondWord){
+    return "AWWWWRIGHT";
+  } 
+  else {
+      return "Y U NO MATCH!";
+  }
+}
+
+var doesThisWork = isEqual(true, "turtle");
+// console.log(doesThisWork);
 
 
 /*Function - isNotEqual
-Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are not equal otherwise return 'Y U MATCH!'.*/
+Write a function that takes two variables of type String called firstWord and secondWord respectively. 
+Return 'AWWWWRIGHT' if the two are not equal otherwise return 'Y U MATCH!'.*/
 
+function isNotEqual(firstWord, secondWord){
+  if (firstWord !== secondWord){
+    return "AWWWWRIGHT";
+  } else{
+      return "Y U MATCH!";
+  }
+}
+var howBoutThis = isNotEqual("shark", "turtle");
+// console.log(howBoutThis);
 
 /*Function - doubleEquals
-Write a function that takes two variables of type Boolean called first and second respectively. Return true if both values are true otherwise return false.*/
+Write a function that takes two variables of type Boolean called first and second respectively. 
+Return true if both values are true otherwise return false.*/
 
+function doubleEquals (first, second){
+  if (first && second){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+var check = doubleEquals(true, 2<4);
+// console.log(check); 
 
 
 /*Function - totalOver30
-Write a function that takes three variables of type Number called first and second and third respectively. Return true if the sum of all values are greater than 30 otherwise return false.*/
+Write a function that takes three variables of type Number called first and second and third respectively. 
+Return true if the sum of all values are greater than 30 otherwise return false.*/
 
+function totalOver30 (first, second, third){
+  if ((first + second + third) > 30){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+var checkMycode = totalOver30(0, 5, 10);
+var checkMycode = totalOver30(30, 40, 50);
+console.log(checkMycode);
 
 
 /*Function - totalUnderWhat
